@@ -161,5 +161,5 @@ select * from
 (select department,employee,salary,
 dense_rank() over(PARTITION BY department order by salary desc) AS R 
 from temp2) as a
-where a.r < 3
-----learn about cte ----
+where a.r < 3 -- have to give alias here 
+----learn about cte  this solves most of the alias problem----
